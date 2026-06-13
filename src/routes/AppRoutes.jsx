@@ -7,6 +7,8 @@ import Services from "../pages/Services";
 import Gallery from "../pages/Gallery";
 import Contact from "../pages/Contact";
 import ProductDetails from "../pages/ProductDetails";
+import Projects from "../components/Projects";
+
 
 
 
@@ -16,6 +18,7 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/products" element={<Products />} />
+      <Route path="/projects" element={<Projects />} />
       <Route path="/services" element={<Services />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<Contact />} />
