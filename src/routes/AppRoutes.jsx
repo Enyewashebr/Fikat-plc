@@ -8,6 +8,7 @@ import Gallery from "../pages/Gallery";
 import Contact from "../pages/Contact";
 import ProductDetails from "../pages/ProductDetails";
 import Projects from "../components/Projects";
+import Dashboard from "../pages/admin/Dashboard";
 
 
 
@@ -15,6 +16,7 @@ import Projects from "../components/Projects";
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="/admin" element={<Dashboard />}/>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/products" element={<Products />} />
