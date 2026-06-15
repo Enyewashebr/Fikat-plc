@@ -9,6 +9,10 @@ import Contact from "../pages/Contact";
 import ProductDetails from "../pages/ProductDetails";
 import Projects from "../components/Projects";
 import Dashboard from "../pages/admin/Dashboard";
+import AdminProducts from "../pages/admin/AdminProducts";
+import AddProduct from "../pages/admin/AddProduct";
+import EditProduct from "../pages/admin/EditProduct";
+import Messages from "../pages/admin/Messages";
 
 
 
@@ -17,6 +21,22 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/admin" element={<Dashboard />}/>
+      <Route
+  path="/admin/products"
+  element={<AdminProducts />}
+/>
+<Route
+  path="/admin/add-product"
+  element={<AddProduct />}
+/>
+<Route
+  path="/admin/products/edit/:id"
+  element={<EditProduct />}
+/>
+<Route
+  path="/admin/messages"
+  element={<Messages />}
+/>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/products" element={<Products />} />
