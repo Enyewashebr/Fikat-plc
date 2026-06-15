@@ -1,11 +1,8 @@
-
-
 const ProjectCard = ({ project }) => {
   return (
     <div className="rounded-xl overflow-hidden shadow-lg">
 
       <img
-      
         src={project.image}
         alt={project.title}
         className="

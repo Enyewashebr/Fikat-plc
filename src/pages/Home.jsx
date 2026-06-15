@@ -7,7 +7,7 @@ import FeaturedProducts from '../components/FeaturedProducts'
 import Services from '../components/Services'
 import GalleryPreview from '../components/GalleryPreview'
 import Partners from '../components/Partners'
-import ProjectCard from '../components/ProjectCard'
+// import ProjectCard from '../components/ProjectCard'
 
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
       <WhyChooseUs />
       <ProductCategories />
       <FeaturedProducts />
-      <ProjectCard />
+      {/* <ProjectCard /> */}
       <Partners />
       <Services />
       <GalleryPreview />
