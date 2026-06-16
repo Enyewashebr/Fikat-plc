@@ -20,11 +20,11 @@ const Contact = () => {
             <div className="space-y-4">
               <p>
                 <FaPhone className="inline-block mr-2 text-gray-600" />
-                <strong>Phone:</strong> +251 XXX XXX XXX
+                <strong>Phone:</strong> +251 948006098
               </p>
               <p>
                 <FaEnvelope className="inline-block mr-2 text-gray-600" />
-                <strong>Email:</strong> info@fikat.com
+                <strong>Email:</strong> plcfikat@gmail.com
               </p>
               <p>
                 <FaMapMarkerAlt className="inline-block mr-2 text-gray-600" />

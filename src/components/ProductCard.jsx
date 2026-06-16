@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
 
         <Link
   to={`/products/${product.id}`}
-  className="inline-block mt-4 bg-black text-white px-4 py-2 rounded"
+  className="inline-block mt-4 bg-black text-white px-4 py-2 rounded bg-blue-600 text-white"
 >
   View Details
 </Link>

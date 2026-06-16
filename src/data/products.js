@@ -1,6 +1,6 @@
-import granite from "../assets/logo.png";
-import ceramic from "../assets/logo.png";
-import marble from "../assets/logo.png";
+import granite from "../assets/products/granite.png";
+import ceramic from "../assets/products/ceramic.png";
+import marble from "../assets/products/marble.png";
 
 
 export const products = [

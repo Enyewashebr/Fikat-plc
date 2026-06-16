@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import { products } from "../data/products";
-
+import { Link } from "react-router-dom";
 const ProductDetails = () => {
   const { id } = useParams();
 
@@ -36,9 +36,12 @@ const ProductDetails = () => {
               {product.description}
             </p>
 
-            <button className="bg-black text-white px-6 py-3 rounded">
+           <Link
+              to="/contact"
+              className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold transition"
+            >
               Request Quote
-            </button>
+            </Link>
           </div>
         </div>
       </div>

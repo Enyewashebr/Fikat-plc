@@ -1,31 +1,30 @@
-import graniteImg from "../assets/logo.png";
-import ceramicImg from "../assets/logo.png";
-import marbleImg from "../assets/logo.png";
-import finishingImg from "../assets/logo.png";
+import gra1 from "../assets/products/gra1.png";
+import cera1 from "../assets/products/cera1.png";
+import mar1 from "../assets/products/mar1.png";
 
 const categories = [
   {
     title: "Granite",
-    image: graniteImg,
+    image: gra1,
   },
   {
     title: "Ceramic Tiles",
-    image: ceramicImg,
+    image: cera1,
   },
   {
     title: "Marble",
-    image: marbleImg,
+    image: mar1,
   },
   {
     title: "Finishing Materials",
-    image: finishingImg,
+    image: gra1,
   },
 ];
 const ProductCategories = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-white rounded-xl shadow-md hover:shadow-xl transition">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <h2 className="text-4xl  text-center mb-4 text-blue-700 font-bold">
           Our Products
         </h2>
 

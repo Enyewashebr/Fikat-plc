@@ -1,9 +1,14 @@
-import ProjectCard from "./ProjectCard";
-import { projects } from "../data/projects";
+import React from 'react'
+import MainLayout from '../layouts/MainLayout'
+
+import ProjectCard from '../components/ProjectCard'
+import { projects } from '../data/projects'
 
 const Projects = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <MainLayout>
+ 
+    <section className="py-20 bg-white">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -28,6 +33,11 @@ const Projects = () => {
 
       </div>
     </section>
-  );
-};
-export default Projects;
+  
+
+    </MainLayout>
+  )
+}
+
+export default Projects
+

@@ -1,10 +1,11 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout'
+import Service from '../components/Services'
 
 const Services = () => {
   return (
     <MainLayout>
-      <h1>Services</h1> 
+      <Service />
     </MainLayout>
   )
 }

@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
   return (
     <section className="py-20 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4">
+        <h2 className="text-4xl font-bold text-center mb-4 text-blue-700">
           Why Choose Us
         </h2>
 
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
           Your trusted partner for premium construction and finishing materials.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
           {reasons.map((reason, index) => (
             <div
               key={index}

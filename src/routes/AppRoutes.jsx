@@ -7,7 +7,7 @@ import Services from "../pages/Services";
 import Gallery from "../pages/Gallery";
 import Contact from "../pages/Contact";
 import ProductDetails from "../pages/ProductDetails";
-import Projects from "../components/Projects";
+import Projects from "../pages/Projects";
 import Dashboard from "../pages/admin/Dashboard";
 import AdminProducts from "../pages/admin/AdminProducts";
 import AddProduct from "../pages/admin/AddProduct";

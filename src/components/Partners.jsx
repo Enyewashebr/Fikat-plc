@@ -1,12 +1,14 @@
-import logo from "../assets/logo.png";
+import partner1 from "../assets/partner/partner1.png";
+import partner2 from "../assets/partner/partner2.png";
+import partner3 from "../assets/partner/partner3.png";
 
 const Partners = () => {
   const brands = [
-    logo,
-    logo,
-    logo,
-    logo,
-    logo,
+    partner1,
+    partner2,
+    partner3,
+   partner1,
+      partner2,
   ];
 
   return (
