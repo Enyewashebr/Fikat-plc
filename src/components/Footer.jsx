@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo3 from "../assets/logo3.png";
 import {
   FaFacebook,
   FaInstagram,
@@ -21,9 +21,9 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <img
-              src={logo}
+              src={logo3}
               alt="Fikat Logo"
-              className="h-16 mb-4"
+              className="h-16 mb-4 "
             />
 
             <p className="text-gray-400">
@@ -75,11 +75,11 @@ const Footer = () => {
               </li>
               <li>
                 <FaPhone className="inline mr-2" />
-                +251 XXX XXX XXX
+                +251911524938/ +251930796513
               </li>
               <li>
                 <FaEnvelope className="inline mr-2" />
-                info@fikat.com
+                plcfikat@gmail.com
               </li>
             </ul>
           </div>

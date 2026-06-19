@@ -20,7 +20,7 @@ const Contact = () => {
             <div className="space-y-4">
               <p>
                 <FaPhone className="inline-block mr-2 text-gray-600" />
-                <strong>Phone:</strong> +251 948006098
+                <strong>Phone:</strong> +251911524938/ +251930796513
               </p>
               <p>
                 <FaEnvelope className="inline-block mr-2 text-gray-600" />

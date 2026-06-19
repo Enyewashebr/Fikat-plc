@@ -14,9 +14,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Fikat Logo" className="h-12 w-auto" />
-          <h1 className="text-lg font-bold text-gray-800 hidden sm:block">
-            Fikat Finishing PLC
-          </h1>
+          
         </Link>
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
