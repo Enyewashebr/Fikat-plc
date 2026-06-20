@@ -15,12 +15,12 @@ const ProductCard = ({ product }) => {
         </h3>
 
         <p className="text-gray-600 mt-2">
-          {product.description}
+          {product.shortDescription}
         </p>
 
         <Link
   to={`/products/${product.id}`}
-  className="inline-block mt-4 bg-black text-white px-4 py-2 rounded bg-blue-600 text-white"
+  className="inline-block mt-4 bg-[#E56D2E] text-white px-4 py-2 rounded hover:bg-orange-700 transition"
 >
   View Details
 </Link>

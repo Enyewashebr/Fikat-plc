@@ -10,11 +10,11 @@ const ProjectsPreview = () => {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-blue-700 mb-4">
+        <h2 className="text-4xl font-bold text-center text-[#E56D2E] mb-4">
           Our Projects
         </h2>
 
-        <p className="text-center text-gray-600 mb-12">
+        <p className="text-center bg-[#E56D2E] text-white py-4 mb-12">
           Explore some of the projects supplied with our premium materials.
         </p>
 
@@ -30,7 +30,7 @@ const ProjectsPreview = () => {
         <div className="text-center mt-12">
           <Link
             to="/projects"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition"
+            className="inline-block bg-[#E56D2E] hover:bg-orange-700 text-white px-8 py-3 rounded-lg transition"
           >
             View All Projects
           </Link>

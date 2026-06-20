@@ -7,22 +7,24 @@ import Services from "../components/Services";
 import Partners from "../components/Partners";
 import ProjectsPreview from "../components/ProjectsPreview";
 import ContactCTA from "../components/ContactCTA";
+import WhoWeAre from "../components/WhoWeAre";
 
 const Home = () => {
   return (
     <MainLayout>
 
       <Hero />
-
+      <WhoWeAre />  
+<ProductCategories />
       <WhyChooseUs />
 
-      <ProductCategories />
+      
 
       <FeaturedProducts />
 
-      <Services />
+      {/* <Services />
 
-      <Partners />
+      <Partners /> */}
 
       <ProjectsPreview />
 

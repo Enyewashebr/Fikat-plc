@@ -12,30 +12,33 @@ const Hero = () => {
       <div className="w-full h-full bg-black/50 flex items-center">
         <div className="max-w-6xl mx-auto px-6 text-white">
 
-          <h1 className="text-5xl md:text-7xl font-bold">
-            Premium Construction Materials
-          </h1>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+  Premium Granite, Marble, porcelain &
+  Ceramic Solutions
+</h1>
+
+          
+
 
           <p className="mt-6 text-xl max-w-2xl">
-            Granite, Ceramic, Marble & Finishing Materials
-            for Residential and Commercial Projects.
-          </p>
-
+  Imported quality materials for residential,
+  commercial and public projects across Ethiopia.
+</p>
           <div className="mt-8 flex gap-4">
 
             <Link
-              to="/products"
-              className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition"
-            >
-              View Products
-            </Link>
+  to="/products"
+  className="bg-[#E56D2E] hover:bg-orange-700 px-6 py-3 rounded-lg transition"
+>
+  View Products
+</Link>
 
-            <Link
-              to="/contact"
-              className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold transition"
-            >
-              Request Quote
-            </Link>
+<Link
+  to="/contact"
+  className="bg-white text-black px-6 py-3 rounded-lg font-semibold transition hover:bg-gray-200"
+>
+  Request Quote
+</Link>
 
           </div>
 

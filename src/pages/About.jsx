@@ -72,9 +72,7 @@ const About = () => {
               </h3>
 
               <p className="text-gray-700 leading-7">
-                To deliver reliable construction and finishing materials
-                through exceptional service, quality products, and
-                competitive pricing that create value for our customers.
+                To make a positive impact on economic development and social transformation by delivering quality, efficient, and affordable products with the highest level of customer satisfaction.
               </p>
             </div>
 
@@ -84,9 +82,7 @@ const About = () => {
               </h3>
 
               <p className="text-gray-700 leading-7">
-                To become one of Ethiopia's most trusted suppliers of
-                construction and finishing materials by building lasting
-                relationships based on quality and reliability.
+                To become an extensively large business complex with leading performance in import and export services.
               </p>
             </div>
 

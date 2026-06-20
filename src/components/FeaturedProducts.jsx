@@ -5,7 +5,7 @@ const FeaturedProducts = () => {
   return (
     <section className="py-20 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl font-bold text-center mb-12 text-[#E56D2E]">
           Featured Products
         </h2>
 
