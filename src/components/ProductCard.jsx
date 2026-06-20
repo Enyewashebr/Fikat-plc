@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+  
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
       <img

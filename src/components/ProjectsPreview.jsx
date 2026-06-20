@@ -14,7 +14,7 @@ const ProjectsPreview = () => {
           Our Projects
         </h2>
 
-        <p className="text-center bg-[#E56D2E] text-white py-4 mb-12">
+        <p className="text-center text-gray-600 mb-12">
           Explore some of the projects supplied with our premium materials.
         </p>
 
