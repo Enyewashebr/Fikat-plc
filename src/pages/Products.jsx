@@ -2,6 +2,7 @@ import { useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
+import { Helmet } from "react-helmet-async";
 
 const Products = () => {
   const [search, setSearch] = useState("");
@@ -12,6 +13,16 @@ const Products = () => {
 
   return (
     <MainLayout>
+      <Helmet>
+  <title>
+    Products | Fikat Finishing Material Supplier PLC
+  </title>
+
+  <meta
+    name="description"
+    content="Explore our collection of granite, marble, ceramic, porcelain and finishing materials."
+  />
+</Helmet>
 
       {/* Hero */}
       <section className="bg-black text-white py-24">

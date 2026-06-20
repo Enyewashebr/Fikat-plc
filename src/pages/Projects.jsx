@@ -2,10 +2,21 @@ import MainLayout from "../layouts/MainLayout";
 import ProjectHero from "../components/ProjectHero";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
+import { Helmet } from "react-helmet-async";
 
 const Projects = () => {
   return (
     <MainLayout>
+      <Helmet>
+  <title>
+    Projects | Fikat Finishing Material Supplier PLC
+  </title>
+
+  <meta
+    name="description"
+    content="View residential and commercial projects completed using Fikat premium materials."
+  />
+</Helmet>
 
       {/* Hero Section */}
       <ProjectHero />

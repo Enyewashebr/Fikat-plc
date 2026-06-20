@@ -8,11 +8,21 @@ import MissionVision from "../components/about/MissionVision";
 import WhyChooseFikat from "../components/about/WhyChooseFikat";
 import CoreValues from "../components/about/CoreValues";
 import ContactCTA from "../components/ContactCTA";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <MainLayout>
+<Helmet>
+  <title>
+    About | Fikat Finishing Material Supplier PLC
+  </title>
 
+  <meta
+    name="description"
+    content="Learn about Fikat Finishing Material Supplier PLC and our premium granite, marble, ceramic, porcelain and finishing materials."
+  />
+</Helmet>
 
       <AboutHero />
 
