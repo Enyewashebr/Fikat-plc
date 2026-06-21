@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 
 const ProjectCard = ({ project }) => {
   const [current, setCurrent] = useState(0);
+
+   useEffect(() => {
+    project.images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [project.images]);
 
   const nextImage = () => {
     setCurrent((prev) => (prev + 1) % project.images.length);
@@ -28,7 +35,7 @@ const ProjectCard = ({ project }) => {
         {/* Previous Button */}
         <button
           onClick={prevImage}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-10 h-10 rounded-full shadow flex items-center justify-center"
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-10 h-10 rounded-full shadow flex items-center justify-center cursor-pointer"
         >
           ❮
         </button>
@@ -36,7 +43,7 @@ const ProjectCard = ({ project }) => {
         {/* Next Button */}
         <button
           onClick={nextImage}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-10 h-10 rounded-full shadow flex items-center justify-center"
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-10 h-10 rounded-full shadow flex cursor-pointer items-center justify-center"
         >
           ❯
         </button>
