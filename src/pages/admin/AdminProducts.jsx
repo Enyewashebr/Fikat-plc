@@ -1,220 +1,166 @@
-import AdminLayout from "../../layouts/AdminLayout";
-import { products } from "../../data/products";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const AdminProducts = () => {
+  const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
 
-    const [productList, setProductList] =
-  useState(products);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/products")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error(err));
+  }, []);
 
-const [showDelete, setShowDelete] =
-  useState(false);
+  const deleteProduct = async (id) => {
+    const token = localStorage.getItem("token");
 
-const [selectedId, setSelectedId] =
-  useState(null);
+    if (!window.confirm("Delete this product?")) return;
 
-  const handleDelete = () => {
-  setProductList(
-    productList.filter(
-      (item) =>
-        item.id !== selectedId
-    )
+    try {
+      const response = await fetch(
+        `http://localhost:5000/api/products/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.ok) {
+        setProducts(
+          products.filter((p) => p.id !== id)
+        );
+
+        alert("Product Deleted Successfully");
+      } else {
+        alert("Failed to Delete Product");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong");
+    }
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.name
+      .toLowerCase()
+      .includes(search.toLowerCase())
   );
 
-  setShowDelete(false);
-};
-
-
-
   return (
-    <AdminLayout>
+    <div className="p-6">
+      {/* Header */}
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-3xl font-bold">
+          Products Management
+        </h1>
 
-      <h1 className="text-4xl font-bold mb-10">
-        Products
-      </h1>
+        <Link
+          to="/admin/products/add"
+          className="bg-[#E56D2E] text-white px-4 py-2 rounded hover:bg-orange-700 transition"
+        >
+          Add Product
+        </Link>
+      </div>
 
-      <div className="bg-white rounded shadow overflow-hidden">
+      {/* Search */}
+      <input
+        type="text"
+        placeholder="Search products..."
+        value={search}
+        onChange={(e) =>
+          setSearch(e.target.value)
+        }
+        className="w-full border p-3 rounded mb-4"
+      />
 
-        <table className="w-full">
+      {/* Total */}
+      <p className="text-gray-600 mb-4">
+        Total Products: {filteredProducts.length}
+      </p>
 
+      {/* Table */}
+      <div className="overflow-x-auto bg-white rounded-lg shadow">
+        <table className="w-full border-collapse">
           <thead className="bg-gray-100">
-
             <tr>
-
-              <th className="p-4">
-                Image
-              </th>
-
-              <th>
-                Name
-              </th>
-
-              <th>
-                Category
-              </th>
-
-              <th>
-                Actions
-              </th>
-
+              <th className="border p-3">ID</th>
+              <th className="border p-3">Image</th>
+              <th className="border p-3">Name</th>
+              <th className="border p-3">Category</th>
+              <th className="border p-3">Origin</th>
+              <th className="border p-3">Actions</th>
             </tr>
-
           </thead>
 
           <tbody>
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product) => (
+                <tr
+                  key={product.id}
+                  className="hover:bg-gray-50"
+                >
+                  <td className="border p-3">
+                    {product.id}
+                  </td>
 
-            {productList.map((product) => (
+                  <td className="border p-3">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-16 h-16 object-cover rounded"
+                    />
+                  </td>
 
-              <tr
-                key={product.id}
-                className="border-t"
-              >
+                  <td className="border p-3">
+                    {product.name}
+                  </td>
 
-                <td className="p-4">
+                  <td className="border p-3">
+                    {product.category}
+                  </td>
 
-                  <img
-                    src={product.image}
-                    alt=""
-                    className="
-                    h-16
-                    w-16
-                    object-cover
-                    "
-                  />
+                  <td className="border p-3">
+                    {product.origin}
+                  </td>
 
+                  <td className="border p-3">
+                    <div className="flex gap-2">
+                      <Link
+                        to={`/admin/products/edit/${product.id}`}
+                        className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+                      >
+                        Edit
+                      </Link>
+
+                      <button
+                        onClick={() =>
+                          deleteProduct(product.id)
+                        }
+                        className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td
+                  colSpan="6"
+                  className="text-center p-6 text-gray-500"
+                >
+                  No products found
                 </td>
-
-                <td>
-                  {product.name}
-                </td>
-
-                <td>
-                  {product.category}
-                </td>
-
-                <td>
-
-                  <Link
-  to={`/admin/products/edit/${product.id}`}
-  className="
-  bg-blue-500
-  text-white
-  px-4
-  py-2
-  rounded
-  "
->
-  Edit
-</Link>
-
-                  <button
-  onClick={() => {
-    setSelectedId(product.id);
-    setShowDelete(true);
-  }}
-  className="
-  bg-red-500
-  text-white
-  px-4
-  py-2
-  rounded
-  "
->
-  Delete
-</button>
-
-                </td>
-
               </tr>
-
-            ))}
-
+            )}
           </tbody>
-
         </table>
-        {
-showDelete && (
-
-<div
-className="
-fixed
-inset-0
-bg-black/40
-flex
-items-center
-justify-center
-"
->
-
-<div
-className="
-bg-white
-p-8
-rounded-xl
-w-[400px]
-"
->
-
-<h2
-className="
-text-2xl
-font-bold
-mb-4
-"
->
-Delete Product
-</h2>
-
-<p
-className="
-mb-8
-"
->
-Are you sure?
-</p>
-
-<div className="flex gap-4">
-
-<button
-onClick={() =>
-setShowDelete(false)
-}
-className="
-border
-px-6
-py-3
-rounded
-"
->
-Cancel
-</button>
-
-<button
-onClick={handleDelete}
-className="
-bg-red-500
-text-white
-px-6
-py-3
-rounded
-"
->
-Delete
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-)
-}
-
       </div>
-
-    </AdminLayout>
+    </div>
   );
 };
 

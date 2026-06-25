@@ -133,6 +133,7 @@ const deleteProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
   try {
     const { id } = req.params;
+
     const {
       name,
       category,
@@ -149,16 +150,16 @@ const updateProduct = async (req, res) => {
       `
       UPDATE products
       SET
-        name = $1,
-        category = $2,
-        image = $3,
-        short_description = $4,
-        description = $5,
-        applications = $6,
-        finishes = $7,
-        sizes = $8,
-        origin = $9
-      WHERE id = $10
+        name=$1,
+        category=$2,
+        image=$3,
+        short_description=$4,
+        description=$5,
+        applications=$6,
+        finishes=$7,
+        sizes=$8,
+        origin=$9
+      WHERE id=$10
       RETURNING *
       `,
       [
@@ -171,17 +172,12 @@ const updateProduct = async (req, res) => {
         JSON.stringify(finishes),
         JSON.stringify(sizes),
         origin,
-        id
+        id,
       ]
     );
 
-    if (result.rows.length === 0) {
-      return res.status(404).json({
-        message: "Product not found",
-      });
-    }
+    res.json(result.rows[0]);
 
-    res.status(200).json(result.rows[0]);
   } catch (error) {
     console.error(error);
 
