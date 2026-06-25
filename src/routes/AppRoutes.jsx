@@ -8,21 +8,32 @@ import Gallery from "../pages/Gallery";
 import Contact from "../pages/Contact";
 import ProductDetails from "../pages/ProductDetails";
 import Projects from "../pages/Projects";
-import Dashboard from "../pages/admin/Dashboard";
+// import Dashboard from "../pages/admin/Dashboard";
 import AdminProducts from "../pages/admin/AdminProducts";
-import AddProduct from "../pages/admin/AddProduct";
-import EditProduct from "../pages/admin/EditProduct";
+// import AddProduct from "../pages/admin/AddProduct";
+// import EditProduct from "../pages/admin/EditProduct";
 import Messages from "../pages/admin/Messages";
 import AdminLogin from "../pages/admin/AdminLogin";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import ProtectedRoute from "../components/ProtectedRoutes";
 import AdminAddProduct from "../pages/admin/AdminAddProduct";
 import AdminEditProduct from "../pages/admin/AdminEditProduct";
+import AdminMessages from "../pages/admin/AdminMessages";
+
 
 
 function AppRoutes() {
   return (
     <Routes>
+
+      <Route
+  path="/admin/messages"
+  element={
+    <ProtectedRoute>
+      <AdminMessages />
+    </ProtectedRoute>
+  }
+/>
       <Route
   path="/admin/dashboard"
   element={
@@ -57,18 +68,18 @@ function AppRoutes() {
     </ProtectedRoute>
   }
 />
-<Route
+{/* <Route
   path="/admin/add-product"
   element={<AddProduct />}
-/>
-<Route
+/> */}
+{/* <Route
   path="/admin/products/edit/:id"
   element={<EditProduct />}
-/>
-<Route
+/> */}
+{/* <Route
   path="/admin/messages"
   element={<Messages />}
-/>
+/> */}
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/products" element={<Products />} />
