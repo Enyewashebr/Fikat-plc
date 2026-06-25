@@ -6,7 +6,7 @@ const AdminMessages = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:5000/api/messages", {
+    fetch(`${import.meta.env.VITE_API_URL}api/messages`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

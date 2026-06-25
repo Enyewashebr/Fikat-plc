@@ -6,7 +6,7 @@ const AdminProducts = () => {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch(`${import.meta.env.VITE_API_URL}api/products`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error(err));
@@ -19,7 +19,7 @@ const AdminProducts = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${id}`,
+        `${import.meta.env.VITE_API_URL}api/products/${id}`,
         {
           method: "DELETE",
           headers: {

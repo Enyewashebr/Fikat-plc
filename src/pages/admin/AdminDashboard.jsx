@@ -25,7 +25,7 @@ const [messages, setMessages] = useState([]);
   const token = localStorage.getItem("token");
 
   // Products
-  fetch("http://localhost:5000/api/products")
+  fetch(`${import.meta.env.VITE_API_URL}api/products`)
     .then((res) => res.json())
     .then((data) => {
       setProductsCount(data.length);
@@ -34,7 +34,7 @@ const [messages, setMessages] = useState([]);
     
 
   // Messages
-  fetch("http://localhost:5000/api/messages", {
+  fetch(`${import.meta.env.VITE_API_URL}api/messages`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

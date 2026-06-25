@@ -20,7 +20,7 @@ const AdminEditProduct = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setFormData({
@@ -53,7 +53,7 @@ const AdminEditProduct = () => {
       uploadData.append("image", imageFile);
 
       const uploadResponse = await fetch(
-        "http://localhost:5000/api/upload",
+        `${import.meta.env.VITE_API_URL}api/upload`,
         {
           method: "POST",
           headers: {
@@ -85,7 +85,7 @@ const AdminEditProduct = () => {
     };
 
     const response = await fetch(
-      `http://localhost:5000/api/products/${id}`,
+      `${import.meta.env.VITE_API_URL}api/products/${id}`,
       {
         method: "PUT",
         headers: {
