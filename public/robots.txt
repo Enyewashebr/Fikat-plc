@@ -2,5 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap:
-https://fikatfinishingplc.netlify.app/sitemap.xml
+Sitemap: https://fikatfinishing.com/sitemap.xml
