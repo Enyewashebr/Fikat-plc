@@ -31,16 +31,7 @@ import woodLookPorcelain from "../assets/products/porcelain/wood-porcelain.png";
 // import finishing4 from "../assets/products/finishing/finishing4.png";
 
 export const products = [
-  // GRANITE
-  // {
-  //   id: 1,
-  //   name: "Black Granite",
-  //   category: "Granite",
-  //   image: bgranite,
-  //   description:
-  //     "Premium black granite ideal for countertops, stairs, and wall cladding.",
-  // },
-
+  
   {
   id: 1,
   name: "Black Granite",
