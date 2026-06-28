@@ -44,19 +44,52 @@ const ContactInfo = () => {
 
           </div>
 
-          <div className="bg-gray-50 rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition">
+          {/* <div className="bg-gray-50 rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition">
 
-            <FaMapMarkerAlt className="text-4xl text-[#E56D2E] mx-auto" />
+  <FaMapMarkerAlt className="text-4xl text-[#E56D2E] mx-auto" />
 
-            <h3 className="mt-4 text-2xl font-bold">
-              Address
-            </h3>
+  <h3 className="mt-4 text-2xl font-bold">
+    Address
+  </h3>
 
-            <p className="mt-4">
-              Addis Ababa, Ethiopia
-            </p>
+  <p className="mt-4">
+    Signal Road,
+  </p>
 
-          </div>
+  <p>
+    Dema Hope Building,
+  </p>
+
+  <p>
+    1st Floor, Office F04
+  </p>
+
+  <p>
+    Addis Ababa, Ethiopia
+  </p>
+
+</div> */}
+<div className="bg-gray-50 rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition">
+
+  <FaMapMarkerAlt className="text-4xl text-[#E56D2E] mx-auto" />
+
+  <h3 className="mt-4 text-2xl font-bold">
+    Address
+  </h3>
+
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=Signal+Road+Dema+Hope+Building+F04+Addis+Ababa+Ethiopia"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 block text-gray-700 hover:text-[#E56D2E] transition"
+  >
+    <p>Signal Road</p>
+    <p>Dema Hope Building</p>
+    <p>1st Floor, Office F04</p>
+    <p>Addis Ababa, Ethiopia</p>
+  </a>
+
+</div>
 
         </div>
 
